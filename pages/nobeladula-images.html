@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nobela, Dula, at Mitolohiya Images</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="results-page">
+
+  <!-- HEADER -->
+  <header class="results-header">
+
+    <!-- GOOGLE LOGO -->
+    <div class="small-logo" onclick="window.location.href='../index.html'">
+      <span class="c1">G</span>
+      <span class="c2">o</span>
+      <span class="c3">o</span>
+      <span class="c4">g</span>
+      <span class="c5">l</span>
+      <span class="c6">e</span>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-container">
+
+      <div class="search-bar">
+
+        <!-- SEARCH ICON -->
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.3-4.3"/>
+        </svg>
+
+        <input type="text" value="Nobela, Dula, at Mitolohiya" readonly>
+
+      </div>
+
+      <!-- TABS -->
+      <div class="google-tabs">
+
+        <a href="nobeladula.html" class="tab">
+          <p>Lahat</p>
+        </a>
+
+        <a href="nobeladula-images.html" class="tab active">
+          <p>Images</p>
+        </a>
+
+        <a href="panitikan.html" class="tab">
+          <p>Panitikan</p>
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- CONTENT -->
+  <main class="results-content">
+
+    <p class="results-count">
+      Humigit-kumulang 4,520 larawan
+    </p>
+
+    <!-- IMAGE GRID -->
+    <div class="image-grid">
+
+      <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/nobela1.jpg"
+             alt="Noli Me Tangere"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Noli Me Tangere</h4>
+          <p>Nobela</p>
+        </div>
+
+      </div>
+
+      <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/nobela2.jpg"
+             alt="El Filibusterismo"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>El Filibusterismo</h4>
+          <p>Nobela</p>
+        </div>
+
+      </div>
+
+      <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/dula1.jpg"
+             alt="Ang Huling El Bimbo"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Ang Huling El Bimbo</h4>
+          <p>Dula</p>
+        </div>
+
+      </div>
+
+           <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/dula2.jpg"
+             alt="Les Misérables"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Les Misérables</h4>
+          <p>Dula</p>
+        </div>
+
+      </div>
+
+           <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/mitolohiya1.jpg"
+             alt="Persephone at Hades"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Persephone at Hades</h4>
+          <p>Mitolohiya</p>
+        </div>
+
+      </div>
+
+           <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/mitolohiya2.jpg"
+             alt="Mitolohiya ng Pilipinas"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Mitolohiya ng Pilipinas</h4>
+          <p>Mitolohiya</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- IMAGE VIEWER -->
+<div class="image-modal" id="imageModal">
+
+  <span class="close-btn" onclick="closeImage()">×</span>
+
+  <img id="expandedImg">
+
+</div>
+
+<script>
+
+function openImage(src){
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("expandedImg").src = src;
+}
+
+function closeImage(){
+  document.getElementById("imageModal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

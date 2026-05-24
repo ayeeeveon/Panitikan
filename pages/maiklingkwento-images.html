@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maikling Kwento Images</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="results-page">
+
+  <!-- HEADER -->
+  <header class="results-header">
+
+    <!-- GOOGLE LOGO -->
+    <div class="small-logo" onclick="window.location.href='../index.html'">
+      <span class="c1">G</span>
+      <span class="c2">o</span>
+      <span class="c3">o</span>
+      <span class="c4">g</span>
+      <span class="c5">l</span>
+      <span class="c6">e</span>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-container">
+
+      <div class="search-bar">
+
+        <!-- SEARCH ICON -->
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.3-4.3"/>
+        </svg>
+
+        <input type="text" value="Maikling Kwento" readonly>
+
+      </div>
+
+      <!-- TABS -->
+      <div class="google-tabs">
+
+        <a href="maiklingkwento.html" class="tab">
+          <p>Lahat</p>
+        </a>
+
+        <a href="maiklingkwento-images.html" class="tab active">
+          <p>Images</p>
+        </a>
+
+        <a href="panitikan.html" class="tab">
+          <p>Panitikan</p>
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- CONTENT -->
+  <main class="results-content">
+
+    <p class="results-count">
+      Humigit-kumulang 4,520 larawan
+    </p>
+
+    <!-- IMAGE GRID -->
+    <div class="image-grid">
+
+      <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/maiklingkwento1.jpg"
+             alt="May Mga Lihim Kami Ni Ingkong"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>May Mga Lihim Kami Ni Ingkong</h4>
+          <p>Maikling Kwento</p>
+        </div>
+
+      </div>
+
+      <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/maiklingkwento2.jpg"
+             alt="Bahay Kubo"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Bahay Kubo</h4>
+          <p>Maikling Kwento</p>
+        </div>
+
+      </div>
+
+      <!-- IMAGE ITEM -->
+      <div class="image-card">
+
+        <img src="../images/maiklingkwento3.jpg"
+             alt="Mga Maikling Kwento"
+             onclick="openImage(this.src)">
+
+        <div class="image-info">
+          <h4>Mga Maikling Kwento</h4>
+          <p>Maikling Kwento</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- IMAGE VIEWER -->
+<div class="image-modal" id="imageModal">
+
+  <span class="close-btn" onclick="closeImage()">×</span>
+
+  <img id="expandedImg">
+
+</div>
+
+<script>
+
+function openImage(src){
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("expandedImg").src = src;
+}
+
+function closeImage(){
+  document.getElementById("imageModal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

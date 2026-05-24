@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panitikan Panlipunan</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+  :root {
+    --blue:   #4285F4;
+    --red:    #EA4335;
+    --yellow: #FBBC04;
+    --green:  #34A853;
+    --bg:     #202124;
+    --surface:#303134;
+    --border: #5f6368;
+    --text:   #e8eaed;
+    --muted:  #9aa0a6;
+    --link:   #8ab4f8;
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  body{
+    font-family:'Roboto',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow:hidden;
+  }
+
+  /* =========================
+      HOME PAGE
+  ========================= */
+
+  #page-home{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+  }
+
+  /* TOP BAR */
+
+  .home-topbar{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:16px;
+    padding:14px 20px;
+    font-size:13px;
+  }
+
+  .home-topbar a{
+    color:var(--text);
+    text-decoration:none;
+  }
+
+  .home-topbar a:hover{
+    text-decoration:underline;
+  }
+
+  /* APPS GRID */
+
+  .apps-grid{
+    display:flex;
+    flex-wrap:wrap;
+    width:24px;
+    gap:3px;
+    cursor:pointer;
+  }
+
+  .apps-grid span{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--muted);
+  }
+
+  /* PROFILE */
+
+  .avatar{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#EA4335,#FBBC04);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+  }
+
+  /* CENTER */
+
+  .home-center{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-bottom:120px;
+  }
+
+  /* GOOGLE LOGO */
+
+  .g-logo{
+    font-family:'Product Sans','Roboto',sans-serif;
+    font-size:96px;
+    font-weight:700;
+    letter-spacing:-3px;
+    margin-bottom:34px;
+    user-select:none;
+  }
+
+  .c1{color:var(--blue)}
+  .c2{color:var(--red)}
+  .c3{color:var(--yellow)}
+  .c4{color:var(--blue)}
+  .c5{color:var(--green)}
+  .c6{color:var(--red)}
+
+  /* SEARCH */
+
+  .search-wrap{
+    width:582px;
+    max-width:95vw;
+  }
+
+  .search-bar{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:30px;
+    padding:14px 20px;
+    transition:0.2s;
+  }
+
+  .search-bar:hover{
+    background:#3c4043;
+    box-shadow:0 1px 6px rgba(0,0,0,.4);
+  }
+
+  .search-bar:focus-within{
+    background:#3c4043;
+    box-shadow:0 1px 6px rgba(0,0,0,.4);
+    border-color:#8ab4f8;
+  }
+
+  .search-icon{
+    color:var(--muted);
+    flex-shrink:0;
+  }
+
+  .search-bar input{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    color:var(--text);
+    font-size:16px;
+    font-family:'Roboto',sans-serif;
+  }
+
+  .search-bar input::placeholder{
+    color:var(--muted);
+  }
+
+  /* SEARCH BUTTONS */
+
+  .search-btns{
+    margin-top:28px;
+    display:flex;
+    gap:14px;
+  }
+
+  .sbtn{
+    background:#303134;
+    color:var(--text);
+    border:1px solid #303134;
+    border-radius:4px;
+    padding:11px 22px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.2s;
+  }
+
+  .sbtn:hover{
+    border-color:#5f6368;
+    background:#3c4043;
+  }
+
+  /* FOOTER */
+
+  .home-footer{
+    background:#171717;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .footer-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .footer-links a{
+    color:var(--muted);
+    text-decoration:none;
+  }
+
+  .footer-links a:hover{
+    text-decoration:underline;
+  }
+
+  /* MOBILE */
+
+  @media(max-width:768px){
+
+    .g-logo{
+      font-size:65px;
+    }
+
+    .search-wrap{
+      width:95vw;
+    }
+
+    .home-footer{
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+
+  }
+
+  </style>
+
+</head>
+<body>
+
+<div id="page-home">
+
+  <!-- TOPBAR -->
+  <div class="home-topbar">
+
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+
+    <div class="apps-grid">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="avatar">P</div>
+
+  </div>
+
+  <!-- CENTER -->
+  <div class="home-center">
+
+    <!-- GOOGLE -->
+    <div class="g-logo">
+      <span class="c1">G</span>
+      <span class="c2">o</span>
+      <span class="c3">o</span>
+      <span class="c4">g</span>
+      <span class="c5">l</span>
+      <span class="c6">e</span>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+
+      <div class="search-bar">
+
+        <!-- SEARCH ICON -->
+        <svg class="search-icon" width="20" height="20"
+          viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+
+        </svg>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Maghanap tungkol sa Panitikan..."
+          value="Panitikan"
+        >
+
+      </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="search-btns">
+
+      <button class="sbtn" onclick="doSearch()">
+        Maghanap
+      </button>
+
+      <button class="sbtn" onclick="doSearch()">
+        Maswerte Ako
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="home-footer">
+
+    <div>Pilipinas</div>
+
+    <div class="footer-links">
+      <a href="#">Tungkol</a>
+      <a href="#">Advertising</a>
+      <a href="#">Negosyo</a>
+      <a href="#">Privacy</a>
+      <a href="#">Mga Tuntunin</a>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+  /* ── ROUTING TABLE ──────────────────────────────
+     Add more keywords and their target pages here.
+  ────────────────────────────────────────────── */
+  const routes = {
+    'alamat':          'pages/alamat.html',
+    'anekdota':        'pages/anekdota.html',
+    'balita':          'pages/balita.html',
+    'maikling kwento': 'pages/maiklingkwento.html',
+    'mitolohiya':       'pages/nobeladula.html',
+    'nobela':          'pages/nobeladula.html',
+    'dula':            'pages/nobeladula.html',
+    'panitikan':       'pages/panitikan.html',
+    'parabula':        'pages/parabulapabula.html',
+    'pabula':          'pages/parabulapabula.html',
+    'patula':          'pages/patula.html',
+    'sanaysay':        'pages/sanaysay.html',
+    'talambuhay':      'pages/talambuhay.html',
+    'talumpati':       'pages/talumpati.html',
+  };
+
+  function doSearch() {
+    const val = document.getElementById('searchInput').value.trim().toLowerCase();
+    if (!val) return;
+
+    const target = routes[val];
+    if (target) {
+      window.location.href = target;
+    } else {
+      /* Fallback: go to a generic search results page
+         or replace with your own default behaviour   */
+      window.location.href = 'search.html?q=' + encodeURIComponent(val);
+    }
+  }
+
+  /* Enter key support */
+  document.getElementById('searchInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') doSearch();
+  });
+
+  /* Auto-select the pre-filled text so the user can
+     start typing a new query immediately             */
+  document.getElementById('searchInput').select();
+
+</script>
+
+</body>
+</html>
